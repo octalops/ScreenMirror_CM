@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.screenmirror.contractsdemo.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.screenmirror.contractsdemo.ui.main.MainFragment"
+        tools:layout="@layout/activity_main">
+        <deepLink app:uri="https://video_casting/fragmentMain" />
+        <action
+            android:id="@+id/actionMainToFileList"
+            app:destination="@id/fragmentMediaList" />
+        <action
+            android:id="@+id/actionFragmentMainToMore"
+            app:destination="@id/fragmentMore" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMediaList"
+        android:name="com.screenmirror.contractsdemo.ui.filelist.FileListFragment"
+        tools:layout="@layout/activity_file_list">
+
+        <argument
+            android:name="mediaType"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionMediaListToMediaPreview"
+            app:destination="@id/fragmentMediaPreview" />
+        <action
+            android:id="@+id/actionMediaListToConnectionFragment"
+            app:destination="@id/fragmentConnection" />
+        <action
+            android:id="@+id/actionFragmentMediaListToMediaCast"
+            app:destination="@id/fragmentMediaCasting" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMediaPreview"
+        android:name="com.screenmirror.contractsdemo.ui.mediapreview.MediaPreviewFragment"
+        tools:layout="@layout/media_preview_fragment">
+
+        <argument
+            android:name="link"
+            app:argType="string" />
+        <argument
+            android:name="mediaType"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionFragmentPreviewToConnection"
+            app:destination="@id/fragmentConnection" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentConnection"
+        android:name="com.screenmirror.contractsdemo.ui.connection.ConnectionFragment"
+        tools:layout="@layout/connection_fragment">
+
+        <argument
+            android:name="mediaLink"
+            android:defaultValue="empty"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/actionFragmentConnectionToMediaCasting"
+            app:destination="@+id/fragmentMediaCasting" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMore"
+        android:name="com.screenmirror.contractsdemo.ui.setting.MoreFragment"
+        tools:layout="@layout/more_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMediaCasting"
+        android:name="com.screenmirror.contractsdemo.ui.castingview.MediaCastFragment"
+        tools:layout="@layout/media_cast_fragment">
+
+        <argument
+            android:name="mediaType"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/actionCastingToMediaList"
+            app:destination="@id/fragmentMediaList"
+            app:popUpTo="@id/fragmentMediaList"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentWebView"
+        android:name="com.screenmirror.contractsdemo.ui.privacypolicy.WebViewFragment"
+        tools:layout="@layout/web_view_fragment">
+
+        <deepLink app:uri="https://video_casting/fragmentWebView" />
+
+    </fragment>
+
+</navigation>

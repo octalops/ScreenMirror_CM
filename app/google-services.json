@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "641866285979",
+    "project_id": "screenmirrorsell",
+    "storage_bucket": "screenmirrorsell.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641866285979:android:8639f2971ce2bd3a2a973e",
+        "android_client_info": {
+          "package_name": "com.screenmirror.contractsdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641866285979-3abohbf83pt6gdcv31o4it52nf1oah3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4K_gyfOPXDxi4y7bhD9DlO0VNa4D7AsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641866285979-3abohbf83pt6gdcv31o4it52nf1oah3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

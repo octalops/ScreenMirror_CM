@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Screen Mirroring</string>
+    <string name="terms_of_services"><u>Terms of Services</u></string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="title_activity_main_holder">MainHolderActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="privacy_policy_link">https://sites.google.com/view/screenmirrorcastprivacy/home</string>
+
+    //test ids
+    <string name="testBannerId">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="testInterstialId">ca-app-pub-3940256099942544/1033173712</string>
+
+    //original ids
+    <string name="bannerId">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstialId">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="appId">ca-app-pub-3940256099942544~3347511713</string>
+
+</resources>
